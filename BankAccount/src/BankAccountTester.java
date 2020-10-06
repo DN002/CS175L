@@ -16,14 +16,13 @@ public class BankAccountTester {
 		double deposit = input.nextDouble();
 		myBankAccount.deposit(deposit);	
 		System.out.print("Successfully deposited: "+deposit +" ");
-		System.out.println("Balance after deposit: "+myBankAccount.getBalance());
+		System.out.println("Balance after deposit attempt: "+myBankAccount.getBalance());
 		
 		
 		System.out.print("Enter amount to withdraw: ");
 		double withdraw = input.nextDouble();
 		myBankAccount.withdraw(withdraw);
-		System.out.print("Successfully withdrawn: "+withdraw +" ");
-		System.out.println("Balance after withdrawn: "+myBankAccount.getBalance());
+		System.out.println("Balance after withdrawl attempt: "+myBankAccount.getBalance());
 		
 		myBankAccount.calcInterest(interestPct);
 		

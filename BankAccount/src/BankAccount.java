@@ -29,11 +29,12 @@ public class BankAccount
    sufficient funds are not available.
    @param amount the amount of the withdrawal
 */
-	public void withdraw(double amount)
+	public void withdraw(double withdrawAmount)
 	{
-		balance = balance - amount;
-		if (amount < balance) 
-		{System.out.println("Withdrawal Completed.");}
+		if (withdrawAmount < balance) 
+		{	balance = balance - withdrawAmount;
+			System.out.print("Successfully withdrawn: "+withdrawAmount +" ");
+			System.out.println("Withdrawal Completed.");}
 		else {System.out.println("Insufficient Funds to support withdrawal.");}
 	}
 /**
