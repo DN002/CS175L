@@ -32,7 +32,7 @@ public class BankAccount
 	public void withdraw(double amount)
 	{
 		balance = balance - amount;
-		if (balance > 100) 
+		if (amount < balance) 
 		{System.out.println("Withdrawal Completed.");}
 		else {System.out.println("Insufficient Funds to support withdrawal.");}
 	}
