@@ -1,17 +1,27 @@
 public class romanNumeral {
-
+	
+	/**
+	 * A method to convert the integer to Roman Numeral format
+	 * @param number which represents the value being converted
+	 */
 	public void convert(int number) {
+		
+		//	takes the number to determine the number's value in the 1000's place.
 		int value = Math.round(number / 1000);
 		int remainder = number % 1000;
-
+		
+		//	takes the number to determine the number's value in the 100's place.
 		int value1 = Math.round(remainder / 100);
 		int remainder1 = remainder % 100;
-
+		
+		//	takes the number to determine the number's value in the 10's place.
 		int value2 = Math.round(remainder1 / 10);
 		int remainder2 = remainder1 % 10;
-
+		
+		// takes the number to determine the number's value in the 1's place.
 		int value3 = Math.round(remainder2 / 1);
 
+		//	Shows the number in comparison to the converted result
 		System.out.println("Integer: " + number);
 		System.out.print("Roman Numeral: ");
 		
@@ -117,8 +127,12 @@ public class romanNumeral {
 
 	}
 
+	/**
+	 * The main method that processes the convert method with several different numbers and examples.
+	 * @param args
+	 */
 	public static void main(String[] args) {
-
+		
 		romanNumeral toR = new romanNumeral();
 		toR.convert(1559);
 		toR.convert(2231);
