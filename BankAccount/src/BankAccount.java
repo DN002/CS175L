@@ -6,13 +6,15 @@ applying interest or fees at the end of the month.
 public class BankAccount
 {
 	private double balance;
+	private double interestPct;
 	/**
    	Constructs a bank account with zero balance.
 	* @param amount 
 	*/
-	public BankAccount(double amount)
+	public BankAccount(double amount, double pct)
 	{
 		balance = amount;
+		interestPct = pct;
 	}
 
 /**
@@ -31,10 +33,10 @@ public class BankAccount
 */
 	public void withdraw(double withdrawAmount)
 	{
-		if (withdrawAmount < balance) 
+		if (withdrawAmount <= balance) 
 		{	balance = balance - withdrawAmount;
 			System.out.print("Successfully withdrawn: "+withdrawAmount +" ");
-			System.out.println("Withdrawal Completed.");}
+		}
 		else {System.out.println("Insufficient Funds to support withdrawal.");}
 	}
 /**
@@ -42,9 +44,9 @@ public class BankAccount
  * @param newAmt, double interestPct 
 */
 	
-	public void calcInterest(double amount)
+	public void calcInterest()
 	{
-		balance = balance + (balance * amount);
+		balance = balance + (balance * interestPct);
 	}
 	
 	public double getBalance()

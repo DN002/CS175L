@@ -5,11 +5,13 @@ public class BankAccountTester {
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
-		final double interestPct = .05;
 		System.out.print("Enter amount to start your account: ");
 		double amount = input.nextDouble();
 		
-		BankAccount myBankAccount = new BankAccount(amount);
+		System.out.print("Enter interest percent: ");
+		double pct = input.nextDouble();
+		
+		BankAccount myBankAccount = new BankAccount(amount, pct);
 		System.out.print("Created new account with "+amount +" ");
 		
 		System.out.print("Enter amount to deposit: ");
@@ -24,7 +26,7 @@ public class BankAccountTester {
 		myBankAccount.withdraw(withdraw);
 		System.out.println("Balance after withdrawl attempt: "+myBankAccount.getBalance());
 		
-		myBankAccount.calcInterest(interestPct);
+		myBankAccount.calcInterest();
 		
 		System.out.println("Balance + Calculated Interest: "+myBankAccount.getBalance());
 		
