@@ -3,9 +3,10 @@ public class multiplicationTable {
 
 	public static void main(String[] args) {
 
-		for (int i = 1; i <= 10; i++) {
-			for (int j = 1; j <= 10; j++)
-				System.out.print("\t" + i * j);
+		for (int y = 1; y <= 10; y++) {
+			for (int x = 1; x <= 10; x++) {
+				System.out.printf("%4d", x*y);
+			}
 			System.out.println();
 		}
 	}
