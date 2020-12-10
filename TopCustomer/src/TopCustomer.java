@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class TopCustomer {
 
 	/**
-	 * This three lines below is where the limit and array lists: names and price
+	 * The three lines below is where the limit and array lists: names and price
 	 * are set.
 	 */
 	final static int limit = 5;
@@ -43,7 +43,6 @@ public class TopCustomer {
 					x = false;
 					break;
 				}
-
 				// add price to array
 				price.add(counter, priceIn);
 
