@@ -8,7 +8,7 @@ public class TopCustomer {
 	 * The three lines below is where the limit and array lists: names and price
 	 * are set.
 	 */
-	final static int limit = 5;
+	final static int limit = 10;
 	static ArrayList<String> names = new ArrayList<String>();
 	static ArrayList<Double> price = new ArrayList<Double>();
 
@@ -62,7 +62,6 @@ public class TopCustomer {
 						// add name to array
 						names.add(counter, nameIn);
 						y = false;
-						break;
 					}
 				}
 
@@ -76,7 +75,6 @@ public class TopCustomer {
 					System.out.println("\nLimit reached. Limit was set to " + limit + ". Closing, sorry.");
 					System.out.println("To change limit, the value is a global variable at the top.\n");
 					x = false;
-					break;
 				}
 			} catch (NumberFormatException e1) {
 				System.out.println("This looks incorrect. Price can't be a String. Try again.");
