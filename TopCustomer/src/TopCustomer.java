@@ -41,6 +41,7 @@ public class TopCustomer {
 				Double priceIn = Double.parseDouble(issue);
 				if (priceIn == 0) {
 					x = false;
+					break;
 				}
 				// add price to array
 				price.add(counter, priceIn);
